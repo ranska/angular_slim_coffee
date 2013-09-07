@@ -1,0 +1,10 @@
+| <!doctype html>
+html ng-app=""
+  head
+    script src="../bower_components/angular/angular.min.js"
+  body
+    div
+      label Name:
+      input ng-model="yourName" placeholder="Enter a name here" type="text"
+      hr
+      h1 Hello {{  yourName}}
