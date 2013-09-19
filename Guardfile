@@ -2,9 +2,14 @@
 # More info at https://github.com/guard/guard#readme
 
 guard 'coffeescript', 
-  input: 'coffeescripts',
-  output: 'javascripts'
+  input: 'app/coffeescripts',
+  output: 'app/js'
 
-guard "slim", :output => "html" do
-  watch(%r{^templates/.+(\.slim)$})
+guard :coffeescript, 
+  input: 'test/coffee', 
+  output: 'test'
+
+
+guard "slim", :output => "." do
+  watch(%r{^app/templates/.+(\.slim)$})
 end
